@@ -4,11 +4,12 @@ import time
 from typing import DefaultDict, Dict, Iterator, List, Tuple
 from pathlib import Path
 
+
 def processar_temperaturas(path_do_txt: Path):
     print("Iniciando o processamento do arquivo.")
     start_time: int = time.time()  # Tempo de início
 
-    temperatura_por_station: DefaultDict[str, List[float]]  = defaultdict(list)
+    temperatura_por_station: DefaultDict[str, List[float]] = defaultdict(list)
 
     """
         Exemplo de como vai ficar a variável temperatura_por_station
@@ -23,7 +24,7 @@ def processar_temperaturas(path_do_txt: Path):
             'Roseau': [34.4],
             'Conakry': [31.2],
         }
-        O uso de defaultdict do módulo collections é uma escolha conveniente 
+        O uso de defaultdict do módulo collections é uma escolha conveniente
         Sem o defaultdict, o código para adicionar uma temperatura iria parecer com isso:
         if nome_da_station not in temperatura_por_station:
             temperatura_por_station[nome_da_station] = []
@@ -63,6 +64,7 @@ def processar_temperaturas(path_do_txt: Path):
     print(f"Processamento concluído em {end_time - start_time:.2f} segundos.")
 
     return formatted_results
+
 
 # Substitua "data/measurements10M.txt" pelo caminho correto do seu arquivo
 if __name__ == "__main__":
