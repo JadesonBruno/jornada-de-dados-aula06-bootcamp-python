@@ -29,7 +29,7 @@ def processar_temperaturas(path_do_txt: Path):
         if nome_da_station not in temperatura_por_station:
             temperatura_por_station[nome_da_station] = []
         temperatura_por_station[nome_da_station].append(temperatura)
-        Com defaultdict, isso é simplificado para:
+        Com defaultdict, isso pode ser simplificado para:
         temperatura_por_station[nome_da_station].append(temperatura)
     """
 
